@@ -10,8 +10,8 @@
 </head>
 
 <body>
-  <section class="section">
-    <div class="container">
+  <div class="container">
+    <section class="section are-small">
       <h1 class="title">
         Proyecto Nationalize
       </h1>
@@ -20,18 +20,22 @@
       </h2>
       <div class="box">
         <div class="field">
-          <input class="input is-primary" type="text" id="nombre" placeholder="Ingrese su nombre">
+          <div class="control">
+            <input class="input is-primary" type="text" id="nombre" placeholder="Ingrese su nombre">
+          </div>
         </div>
         <div class="field">
-          <button class="button is-primary" id="boton">Procesar</button>
+          <div class="control">
+            <button class="button is-primary" id="boton">Procesar</button>
+          </div>
         </div>
       </div>
       <div class="box">
         <p id="mensaje">Esperando un nombre para procesar...</p>
       </div>
-      <script src="./codigo.js"></script>
-    </div>
-  </section>
+    </section>
+    <script src="./codigo.js"></script>
+  </div>
 
 </body>
 
