@@ -25,7 +25,7 @@ const mostrarNombre = async (n) => {
   document.getElementById('mensaje').innerHTML = ''
   n.country.forEach(async value => {
     const pais = await traerPais(value.country_id)
-    document.getElementById('mensaje').innerHTML += `${pais}: ${(value.probability * 100).toFixed(2)}%<br>`
+    document.getElementById('mensaje').innerHTML += `<strong>${pais}: ${(value.probability * 100).toFixed(2)}%</strong><br>`
   })
 }
 
@@ -33,11 +33,11 @@ const nombre = document.getElementById('nombre').value;
 const boton = document.getElementById('boton')
 
 boton.addEventListener('click', async () => {
-  document.getElementById('mensaje').innerHTML = 'Cargando...'
+  document.getElementById('mensaje').innerHTML = '<strong>Cargando...</strong>'
   const n = await traerPaises();
   await mostrarNombre(n);
 })
 
 document.getElementById('nombre').addEventListener('keyup', async (event) => {
-  document.getElementById('mensaje').innerHTML = 'Esperando un nombre para procesar...'
+  document.getElementById('mensaje').innerHTML = '<strong>Esperando un nombre para procesar...</strong>'
 })

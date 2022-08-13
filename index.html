@@ -10,33 +10,33 @@
 </head>
 
 <body>
-  <div class="container">
-    <section class="section are-small">
-      <h1 class="title">
-        Proyecto Nationalize
-      </h1>
-      <h2 class="subtitle">
-        Predecir la nacionalidad de tu nombre
-      </h2>
-      <div class="box">
-        <div class="field">
-          <div class="control">
-            <input class="input is-primary" type="text" id="nombre" placeholder="Ingrese su nombre">
+  <section class="container block m-5 p-5">
+    <div class="columns is-multiline">
+      <div class="column is-8 is-offset-2 register">
+        <div class="columns">
+          <div class="column left">
+            <h1 class="title is-1">Proyecto Nationalize</h1>
+            <h2 class="subtitle colored is-4">Predecir la nacionalidad de tu nombre</h2>
+            <p>Proyecto realizado con html/css/javascript consultando APIs públicas que permiten predecir la nacionalidad de un nombre</p>
           </div>
-        </div>
-        <div class="field">
-          <div class="control">
-            <button class="button is-primary" id="boton">Procesar</button>
-          </div>
-        </div>
-      </div>
-      <div class="box">
-        <p id="mensaje">Esperando un nombre para procesar...</p>
-      </div>
-    </section>
-    <script src="./codigo.js"></script>
-  </div>
+          <div class="column right has-text-centered">
+            <h1 class="title is-4">Escriba un nombre</h1>
+            <p class="description">El sistema buscará en la API nationalize y dará como resultado las tres naciones donde más se usa ese nombre</p>
+              <div class="field">
+                <div class="control">
+                  <input class="input is-primary" type="text" id="nombre" placeholder="Ingrese su nombre">
+                </div>
+              </div>
 
-</body>
+              <button class="button is-block is-primary is-fullwidth is-medium" id="boton">Buscar</button>
+              <br />
+              <p id="mensaje"><strong>Esperando un nombre para procesar...</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <script src="./codigo.js"></script>
+  </body>
 
 </html>
